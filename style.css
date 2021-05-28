@@ -134,6 +134,55 @@ footer {
   font-family: "Baloo Chettan 2", cursive;
   font-weight: 600;
 }
+.hidden {
+  display: none;
+}
+
+.tooltip {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.tooltip h4 :hover {
+  visibility: visible;
+  color: #4b79a1;
+}
+.modal {
+  margin: auto;
+  position: absolute;
+  left: 500px;
+  padding: 20px;
+  /* display: inline-block; */
+  width: 50vh;
+  height: 30vh;
+  /* text-align: center; */
+  justify-content: center;
+  background-color: white;
+  color: black;
+  z-index: 10;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.rules {
+  margin-bottom: 8px;
+}
+.close-modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0px 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
 
 @media only screen and (max-width: 550px) {
   .center-content {
@@ -163,5 +212,10 @@ footer {
   }
   footer {
     font-size: 15px;
+  }
+  .modal {
+    position: absolute;
+    left: 21px;
+    height: auto;
   }
 }

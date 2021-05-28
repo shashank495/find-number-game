@@ -1,7 +1,7 @@
 "use strict";
 
 let randomNumber = Math.trunc(Math.random() * 50 + 1);
-let score = 20;
+let score = 10;
 let highScore = 0;
 
 const displayMessage = function (message) {
@@ -43,7 +43,7 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 
 document.querySelector(".again").addEventListener("click", function () {
-  score = 20;
+  score = 10;
   randomNumber = Math.trunc(Math.random() * 50 + 1);
 
   displayMessage("Start Guessing...");
@@ -55,3 +55,22 @@ document.querySelector(".again").addEventListener("click", function () {
 
   document.querySelector(".question").style.padding = "0px 45px";
 });
+
+// Rule Modal
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModal = document.querySelector(".close-modal");
+const tooltip = document.querySelector(".tooltip");
+
+const showModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+tooltip.addEventListener("click", showModal);
+
+const hideModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+closeModal.addEventListener("click", hideModal);
+overlay.addEventListener("click", hideModal);
